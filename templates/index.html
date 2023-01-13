@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Analysis</title>
+</head>
+<body>
+    <h1>COVID RISK ANALYSIS</h1>
+    <form method='POST' action="{{url_for('predict')}}">
+        <p>USMR: <input type="radio" name="usmr"  value="1"> 1<input type="radio" name="usmr"  value="2"> 2</p>
+        <p>PATIENT TYPE: <input type="radio" name="patient_type"  value="1"> 1<input type="radio" name="patient_type"  value="2"> 2</p>
+        <p>PNEUMONIA<input type="radio" name="pneumonia"  value="1">1<input type="radio" name="pneumonia"  value="2">2 </p>
+        <p>AGE: <input type="number" name="age" step="any" placeholder="enter age"> </p>
+        <p>DIABETES: <input type="radio" name="diabetes"  value="1"> 1<input type="radio" name="diabetes"  value="2">2 </p>
+        <p>HYPERTENSION: <input type="radio" name="hypertension"  value="1">1 <input type="radio" name="hypertension"  value="2"> 2</p>
+        <p>RENAL CHRONIC: <input type="radio" name="renal_chronic"  value="1"> 1<input type="radio" name="renal_chronic"  value="2"> 2</p>
+        <p>MEDICAL UNIT: <select name="medical_unit">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+        </select></p>
+        <p>CLASSIFICATION:  <select name="classification">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select></p>
+        <button>SUBMIT</button>
+    </form>
+</body>
+</html>
